@@ -10,12 +10,14 @@ int main()
     int c2;
     int r;
 
+
+
     std::cin >> x >> y >> c1 >> c2 >> r;
 
     int firstSide = abs(x - c1);
     int secondSide = abs(y - c2);
 
-    int distance = sqrt(firstSide) + sqrt(secondSide);
+    double distance = sqrt(firstSide * firstSide + secondSide * secondSide);
 
     if (distance == r)
     {
