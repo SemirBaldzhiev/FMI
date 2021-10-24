@@ -7,7 +7,7 @@ int main()
 
 	std::cin >> age;
 
-	if (age < 0)
+	if (age <= 0)
 	{
 		std::cout << "Invalid age" << std::endl;
 	}
