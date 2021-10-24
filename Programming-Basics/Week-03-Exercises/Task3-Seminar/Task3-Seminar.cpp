@@ -34,6 +34,10 @@ int main()
 		case '=':
 			result = (firstNum == secondNum);
 			break;
+		default:
+			std::cout << "Error" << std::endl;
+			return 0;
+			break;
 
 	}
 
@@ -41,7 +45,7 @@ int main()
 	{
 		std::cout << std::boolalpha << (bool)result << std::endl;
 	}
-	else 
+	else
 	{
 		std::cout << result << std::endl;
 	}
