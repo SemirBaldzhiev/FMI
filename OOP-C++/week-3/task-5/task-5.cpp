@@ -186,6 +186,7 @@ int main()
 	std::cin >> newFileName;
 
 	saveInAnotherFile(fileStream, newFileName);
+	std::cout << "File " << fileName << " successfully saved!";
 	
 	fileStream.close();
 	
