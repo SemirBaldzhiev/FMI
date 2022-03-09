@@ -1,3 +1,4 @@
+// TASK 4 SEMINAR
 #include <iostream>
 #include <fstream>
 #include <cstring>
@@ -24,13 +25,10 @@ void printStudentInfo(std::fstream& in, const char facNum[]) {
 		char email[MAX_SIZE];
 		char fn[MAX_SIZE];
 
-
 		in.getline(firstName, MAX_SIZE, ',');
 		in.getline(lastName, MAX_SIZE, ',');
 		in.getline(email, MAX_SIZE, ',');
-		in.getline(fn, MAX_SIZE, '\n');
-
-
+		in.getline(fn, MAX_SIZE);
 
 		if (strcmp(fn, facNum) == 0) {
 			std::cout << "Name: " << firstName << " " << lastName << ", " << "Email: " << email << ", " << "FN: " << fn << std::endl;
@@ -63,7 +61,7 @@ void editStudent(const char facNum[], const char newEmail[], std::fstream& file)
 		file.getline(firstName, MAX_SIZE, ',');
 		file.getline(lastName, MAX_SIZE, ',');
 		file.getline(email, MAX_SIZE, ',');
-		file.getline(fn, MAX_SIZE, '\n');
+		file.getline(fn, MAX_SIZE);
 
 
 
@@ -93,11 +91,14 @@ void editStudent(const char facNum[], const char newEmail[], std::fstream& file)
 		char email[MAX_SIZE];
 		char fn[MAX_SIZE];
 
-
 		temp.getline(firstName, MAX_SIZE, ',');
 		temp.getline(lastName, MAX_SIZE, ',');
 		temp.getline(email, MAX_SIZE, ',');
-		temp.getline(fn, MAX_SIZE, '\n');
+		temp.getline(fn, MAX_SIZE);
+
+		if (strlen(firstName) == 0) {
+			break;
+		}
 
 		file << firstName << "," << lastName << "," << email << "," << fn << '\n';
 	}
@@ -112,12 +113,14 @@ void editStudent(const char facNum[], const char newEmail[], std::fstream& file)
 void saveInAnotherFile(std::fstream& file, const char newFileName[]) {
 	std::ofstream newFile;
 
-	newFile.open(newFileName);
+	newFile.open(newFileName, std::ios::out);
 
 	if (!newFile.is_open()) {
 		std::cout << "Error\n";
 		return;
 	}
+
+	file.seekg(std::ios::beg);
 
 	while (!file.eof()) {
 		char firstName[MAX_SIZE];
@@ -129,16 +132,16 @@ void saveInAnotherFile(std::fstream& file, const char newFileName[]) {
 		file.getline(firstName, MAX_SIZE, ',');
 		file.getline(lastName, MAX_SIZE, ',');
 		file.getline(email, MAX_SIZE, ',');
-		file.getline(fn, MAX_SIZE, '\n');
+		file.getline(fn, MAX_SIZE);
+
+		if (strlen(firstName) == 0) {
+			break;
+		}
 
 		newFile << firstName << "," << lastName << "," << email << "," << fn << '\n';
 	}
 
 	newFile.close();
-}
-
-void commands() {
-
 }
 
 int main()
@@ -164,21 +167,25 @@ int main()
 
 	do{
 		std::cout << ">";
-		std::cin.getline(command, 16, ' ');
+		std::cin >> command;
 		
 		if (strcmp(command, "print") == 0) {
-			std::cin.getline(facNum, 16, '\n');
+			std::cin >> facNum;
 			printStudentInfo(fileStream, facNum);
 		}
-		else if (strcmp(command, "edit")) {
-			std::cin.getline(facNum, 32, ' ');
-			std::cin.getline(newEmail, 32, '\n');
+		else if (strcmp(command, "edit") == 0) {
+			std::cin >> facNum;
+			std::cin >> newEmail;
 			editStudent(facNum, newEmail, fileStream);
 		}
 
 	} while (strcmp(command, "save") != 0);
 
-	saveInAnotherFile(fileStream, "students2.csv");
+	char newFileName[32];
+
+	std::cin >> newFileName;
+
+	saveInAnotherFile(fileStream, newFileName);
 	
 	fileStream.close();
 	
