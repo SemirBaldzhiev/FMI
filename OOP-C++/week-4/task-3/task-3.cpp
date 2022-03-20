@@ -36,8 +36,6 @@ void readPointFromFile(Point& point) {
     ifs.close();
 }
 
-// voynski@g.fmi.uni-sofia.bg
-
 void modifyString(char str[]) {
 
     for (int i = 0; str[i] != '\0'; i++) {
