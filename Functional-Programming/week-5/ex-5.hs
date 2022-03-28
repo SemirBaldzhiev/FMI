@@ -1,5 +1,3 @@
-import Control.Concurrent (isCurrentThreadBound)
-import System.FilePath (isAbsolute)
 main::IO()
 main = do
     print (multiplyAllBy [1,2,3,4] 2)
@@ -56,9 +54,5 @@ chunksOf _ [] = []
 chunksOf n list = (takeChunk n list):chunksOf n (removeFirstN n list)
 
 -- task 6
-divisors :: Integer -> [Integer]
-divisors n = helper n []
-    where 
-        helper n res 
-            | 
+
 
