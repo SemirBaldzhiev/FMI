@@ -19,6 +19,21 @@ Dictionary& Dictionary::operator=(const Dictionary& other) {
 
 	return *this;
 }
+
+Dictionary::Dictionary(Dictionary&& other) {
+	pairs = other.pairs;
+	other.pairs = nullptr;
+}
+
+Dictionary& Dictionary::operator=(Dictionary&& other) {
+	if (this != &other) {
+		delete[] pairs;
+		pairs = other.pairs;
+		other.pairs = nullptr;
+	}
+
+	return *this;
+}
  
 Dictionary::~Dictionary() {
 	delete[] pairs;

@@ -18,6 +18,26 @@ Pair& Pair::operator=(const Pair& other) {
 	return *this;
 }
 
+Pair::Pair(Pair&& other) noexcept {
+	word_ = other.word_;
+	other.word_ = nullptr;
+	interpretation_ = other.interpretation_;
+	other.interpretation_ = nullptr;
+}
+
+Pair& Pair::operator=(Pair&& other) {
+	if (this != &other) {
+		delete[] word_;
+		delete[] interpretation_;
+		word_ = other.word_;
+		other.word_ = nullptr;
+		interpretation_ = other.interpretation_;
+		other.interpretation_ = nullptr;
+	}
+
+	return *this;
+}
+
 Pair::~Pair() {
 	delete[] word_;
 	delete[] interpretation_;
@@ -49,10 +69,37 @@ void Pair::setInterpretation(const char* interpretation) {
 	strcpy(interpretation_, interpretation);
 }
 
+
+
 void Pair::copy(const Pair& other) {
 	word_ = new char[strlen(other.word_) + 1];
 	strcpy(word_, other.word_);
 
 	interpretation_ = new char[strlen(other.interpretation_) + 1];
 	strcpy(interpretation_, other.interpretation_);
+}
+
+std::ostream& operator<<(std::ostream& out, const Pair& pair)
+{
+	out << "Word: " << pair.getWord() << "\n" << "Meaning: " << pair.getInterpretation() << "\n";
+ 
+	return out;
+}
+
+std::istream& operator>>(std::istream& in, Pair& pair)
+{
+	char wordBuffer[1024];
+	in.getline(wordBuffer, 1024);
+
+	pair.word_ = new char[strlen(wordBuffer) + 1];
+	strcpy(pair.word_, wordBuffer);
+	
+	char interpretationBuffer[1024];
+	in.getline(interpretationBuffer, 1024);
+
+	pair.interpretation_ = new char[strlen(interpretationBuffer) + 1];
+	strcpy(pair.interpretation_, interpretationBuffer);
+
+	return in;
+
 }
