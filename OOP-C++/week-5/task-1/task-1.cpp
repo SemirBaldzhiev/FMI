@@ -80,6 +80,34 @@ public:
 		return result;
 	}
 
+	Rational& operator+=(const Rational& other) {
+		this->add(other);
+
+		return *this;
+	}
+
+	Rational operator+(const Rational& other) {
+
+	}
+
+	Rational& operator-=(const Rational& other) {
+		this->subtract(other);
+
+		return *this;
+	}
+
+	friend std::istream& operator>>(std::istream& in, Rational& r) {
+		in >> r.numerator;
+		in >> r.denominator;
+
+		return in;
+	}
+
+	friend std::ostream& operator<<(std::ostream& out, Rational& r) {
+		out << r.numerator << "\n" << r.denominator;
+		return out;
+	}
+
 	void print() {
 		std::cout << this->numerator << "/" << this->denominator << std::endl;
 	}
