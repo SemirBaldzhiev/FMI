@@ -156,16 +156,16 @@ void ComputerStore::setWorkingTime(const char* time) {
 	strcpy_s(workingTime, strlen(time) + 1, time);
 }
 
-bool isDigit(char c) {
+bool ComputerStore::isDigit(char c) {
 	return ('0' <= c && c <= '9');
 }
 
 void ComputerStore::copy(const ComputerStore& other) {
 	storeName = new char[strlen(other.storeName) + 1];
-	strcpy(storeName, other.storeName);
+	strcpy_s(storeName, strlen(other.storeName) + 1, other.storeName);
 
 	workingTime = new char[strlen(other.workingTime) + 1];
-	strcpy(workingTime, other.workingTime);
+	strcpy_s(workingTime, strlen(other.workingTime) + 1, other.workingTime);
 
 	currentTurnover = other.currentTurnover;
 

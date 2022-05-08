@@ -43,6 +43,7 @@ private:
 	void copy(const ComputerStore& other);
 	void destroy();
 	void resize();
+	bool isDigit(char c);
 };
 
 

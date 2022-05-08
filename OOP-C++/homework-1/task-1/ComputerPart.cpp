@@ -154,10 +154,10 @@ void ComputerPart::copy(const ComputerPart& other) {
 	price = other.price;
 
 	brand = new char[strlen(other.brand) + 1];
-	strcpy(brand, other.brand);
+	strcpy_s(brand, strlen(other.brand) + 1, other.brand);
 
 	model = new char[strlen(other.model) + 1];
-	strcpy(model, other.model);
+	strcpy_s(model, strlen(other.model) + 1, other.model);
 }
 
 void ComputerPart::destroy() {
