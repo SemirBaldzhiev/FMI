@@ -8,7 +8,6 @@ public:
 	Employee(const char* name, const unsigned int month);
 	Employee(const Employee& other);
 	Employee& operator=(const Employee& other);
-	~Employee();
 
 	void setName(const char* name);
 	void setMonths(const unsigned int months);
@@ -19,6 +18,7 @@ public:
 protected:
 	char* name;
 	unsigned int months;
+	virtual Employee* clone() = 0;
 
 private:
 	void copy(const Employee& other);

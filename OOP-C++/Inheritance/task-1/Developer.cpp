@@ -6,3 +6,7 @@ Developer::Developer(const char* name, const unsigned int months, bool knowCPlus
 	this->knowCPlusPlus = knowCPlusPlus;
 	this->knowCSharp = knowCSharp;
 }
+
+Employee* Developer::clone() {
+	return new Developer(*this);
+}

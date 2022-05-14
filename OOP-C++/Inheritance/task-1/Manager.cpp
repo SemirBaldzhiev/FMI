@@ -5,3 +5,7 @@ Manager::Manager(const char* name, const unsigned int months, unsigned int count
 	setMonths(months);
 	this->countEmployees = countEmployees;
 }
+
+Employee* Manager::clone() {
+	return new Manager(*this);
+}

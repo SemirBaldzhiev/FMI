@@ -22,10 +22,6 @@ Employee& Employee::operator=(const Employee& other) {
 	return *this;
 }
 
-Employee::~Employee() {
-	clear();
-}
-
 void Employee::setName(const char* name) {
 	
 	int size = strlen(name) + 1;
@@ -44,6 +40,7 @@ unsigned int Employee::getMonths() const {
 char* Employee::getName() const {
 	return name;
 }
+
 
 void Employee::copy(const Employee& other) {
 	setName(other.name);

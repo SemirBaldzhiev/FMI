@@ -32,5 +32,10 @@ int main()
        std::cout << cmp.getEmployes()[i]->getName() << " " << cmp.getEmployes()[i]->getMonths() << std::endl;
     }
 
+    delete emp;
+    delete emp1;
+    delete emp2;
+    delete mng;
+
     return 0;
 }
