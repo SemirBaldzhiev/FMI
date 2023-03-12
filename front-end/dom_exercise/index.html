@@ -1,0 +1,131 @@
+<style>
+    body {
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+    }
+
+    .wrapper {
+        background-color: #e2e2e2;
+    }
+
+    .green {
+        background-color: #8efc88;
+    }
+
+    .red-border {
+        border: 1px solid red;
+    }
+
+    .box {
+        border: 1px solid black;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .red {
+        background-color: #ff5479;
+    }
+</style>
+
+<div class="wrapper">
+    <form id="studentForm">
+        <label for="studentName">Име:</label>
+        <br />
+        <input id="studentName" placeholder="Въведе име" />
+        <br />
+
+        <label for="studentFamily">Фамилия:</label>
+        <br />
+        <input id="studentFamily" placeholder="Въведе фамилия" />
+        <br />
+
+        <label for="studentNumber">Факултетен номер:</label>
+        <br />
+        <input id="studentNumber" type="number" placeholder="Въведе факултетен номер" />
+        <br />
+
+        <label for="studentGrade">Успех:</label>
+        <br />
+        <input id="studentGrade" placeholder="Въведе успех" />
+        <br />
+        <button>Въведи данните</button>
+    </form>
+    <div class="box green">Успешно добавен студент</div>
+    <div class="box red">Грешка!!</div>
+</div>
+
+<div class="wrapper">
+    <button id="filterBtn">Сортирай по име</button>
+    <button id="filterBtn">Сортирай по успех</button>
+    <button id="showAllBtn">Всички студенти</button>
+    <button id="showGreenBtn">Всички с достатъчен успех</button>
+    <button id="showNotGreenBtn">Всички без достатъчен успех</button>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>
+                    Име
+                </th>
+                <th>
+                    Фамилия
+                </th>
+                <th>
+                    Факултетен номер
+                </th>
+                <th>
+                    Успех
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Петър
+                </td>
+                <td>
+                    Петров
+                </td>
+                <td>
+                    344401
+                </td>
+                <td>
+                    3.2
+                </td>
+            </tr>
+            <tr class="green">
+                <td>
+                    Петър
+                </td>
+                <td>
+                    Петров
+                </td>
+                <td>
+                    344401
+                </td>
+                <td>
+                    5.9
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Петър
+                </td>
+                <td>
+                    Петров
+                </td>
+                <td>
+                    344401
+                </td>
+                <td>
+                    2.7
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    const table = document.getElementsByTagName("table");
+    const stName = document.getElementById("studentName").value;
+    const stFamily = document.getElementById("")
+
+</script>

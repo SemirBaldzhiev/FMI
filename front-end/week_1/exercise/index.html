@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="form">
+        <h1>Add employee</h1>
+        <fieldset>
+            <legend>Employee information</legend>
+            <fieldset>
+                <legend>Personal information</legend>
+                <label for="first-name">First name:</label>
+                <input type="text" id="first-name" placeholder="First name" name="first-name" required>
+                <label for="last-name">Last name:</label>
+                <input type="text" id="last-name" placeholder="Last name" name="last-name" required>
+                <label for="birth">Birth date:</label>
+                <input type="date" id="birth" value="" name="birth" required>
+                <label for="birth">Title of Courtesy:</label>
+                <input type="radio" id="first-choice" name="choice" required>
+                <label for="first-choice">Dr.</label>
+                <input type="radio" id="second-choice" name="choice" required>
+                <label for="second-choice">Mr.</label>
+                <input type="radio" id="third-choice" name="choice" required>
+                <label for="third-choice">Mrs.</label>
+                <input type="radio" id="fourth-choice" name="choice" required>
+                <label for="fourth-choice">Ms.</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Constant information</legend>
+                <label for="address">Address:</label>
+                <input type="text" pl aceholder="Address" name="address" id="address" required>
+
+                <label for="city">City:</label>
+                <input type="text" placeholder="City" name="city" id="city" required>
+                <label for="region">Region:</label>
+                <input type="text" placeholder="Region" name="region" id="region" required>
+
+                <label for="postal-code">Postal code:</label>
+                <input type="number" placeholder="1234" name="postal-code" id="postal-code" min="1000" max="9999" required>
+                
+                <label for="country">Country:</label>
+                <input type="text" placeholder="Country" name="country" id="country" required>
+
+                <label for="phone">Mobile phone:</label>
+                <input type="tel" placeholder="+35977438249" name="phone" id="phone" pattern="\+359[0-9]{8}" required>
+
+                <label for="email">Email:</label>
+                <input type="email" placeholder="example@example.com" name="email" id="email" required>
+            </fieldset>
+            <fieldset>
+                <legend>Job information</legend>
+                <label for="job">Job title:</label>
+                <input type="text"  placeholder="Job title" name="job" required>
+                <label for="managers">Manager:</label>
+
+                <select name="managers" id="managers">
+                    <option value="name">John Doe</option>
+                </select>
+
+                <label for="password">Password:</label>
+                <input type="password" name="password" placeholder="Password" id="password" required>
+
+                <label for="rep-password">Repeat Pasword:</label>
+                <input type="password" name="rep-password" placeholder="Repeat password" id="rep-password" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional information</legend>
+                <label for="note">Notes:</label>
+                <textarea name="note" id="note" cols="30" rows="10" placeholder="Some additional notes..." required></textarea>
+            </fieldset>
+            
+        </fieldset>
+        <input type="checkbox" name="confirm" id="confrim">
+        <label for="confirm">Yes, i confrim.</label>
+        <input type="submit" value="Add employee" form="form">
+    </form>
+</body>
+</html>

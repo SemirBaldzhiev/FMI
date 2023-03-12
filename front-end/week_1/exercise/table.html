@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Column1</th>
+                <th>Column2</th>
+                <th>Column3</th>
+                <th>Column4</th>
+                <th>Column5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="3">Some text</td>
+                <td>A</td>
+                <td>B</td>
+            </tr>
+
+            <tr>
+                <td rowspan="3">C</td>
+                <td>D</td>
+                <td>E</td>
+                <td>F</td>
+                <td>G</td>
+            </tr>
+            <tr>
+                <td>H</td>
+                <td colspan="2">I</td>
+                <td rowspan="2" align="right" valign="bottom">J</td>
+            </tr>
+            <tr>
+                <td>K</td>
+                <td >L</td>
+                <td >M</td>
+            </tr>
+            <tr>
+                <td>N</td>
+                <td colspan="4">O</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+              <td colspan="5" align="right">I'm footer</td>
+            </tr>
+          </tfoot>
+    </table>
+</body>
+</html>

@@ -1,0 +1,154 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper {
+	position: relative;
+	width: 960px;
+	border: 1px solid black;
+	box-sizing: border-box;
+	height: 1200px;
+	margin: auto;
+}
+
+
+
+.logo {
+	width: 50px;
+	height: 50px;
+
+}
+
+.flex {
+	display: flex;
+}
+
+.header-list{
+	list-style-type: none;
+	justify-content: space-between;	
+}
+
+.header-list li {
+	border: 1px solid orange;
+	margin-left:16px;
+	padding:8px;
+}
+	
+
+#main-header {
+	justify-content: space-between;
+	background-color: khaki;
+	height: 70px;
+	box-sizing:border-box;
+	align-items: center;
+	padding-left: 5px;
+	padding-right: 25px;
+	border-bottom: 1px dashed darkolivegreen;
+}
+
+.buttons {
+	margin:41px;
+}
+
+.buttons input:not(:last-child){
+	margin-right:40px;
+}
+
+.buttons {
+	margin: 15px 20px;
+}
+
+.buttons input {
+	width: 24px;
+	height:24px;
+}
+
+#main-content {
+	background-color: yellowgreen;
+	flex-direction: column;
+	align-items: center;
+	width:540px;
+	margin: auto;
+}
+
+form {
+	background-color: #8b4513;
+	flex-direction: column;
+	justify-content: space-between;
+	padding:32px;
+	margin-top: 150px;
+	margin-bottom: 70px;
+	border-radius: 10px;
+	color:white;
+	width: 540px;
+	align-items: center;
+}
+
+form input[type="text"] {
+	height: 40px;
+}
+
+label {
+	text-align: left;
+}
+
+form input, textarea {
+	border-radius: 5px;
+	border:none;
+	margin-bottom: 16px;
+	width: 400px;
+
+}
+
+input[type="submit"] {
+	background-color: khaki;
+	margin-top:32px;
+	height:40px;
+}
+
+#main {
+	background-color: yellowgreen;
+}
+
+footer {
+	justify-content: space-between;
+	align-items: center;
+	padding:0 30px;
+	height: 70px;
+	color:white;
+	background-color: darkolivegreen;
+	border-top: 2px solid white;
+	
+}
+
+footer ul li{
+
+	justify-content: space-between;
+	margin-left:16px;
+	padding:8px;
+	list-style-type: none;
+	justify-content: space-between;	
+}
+
+.content img {
+	width: 240px;
+	height: 160px;
+	margin-bottom: 5px;
+}
+
+.content img + p {
+	margin-bottom: 30px;
+}
+
+p {
+	margin:0;
+	padding:0;
+}
+
+.content {
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
