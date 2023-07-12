@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="vue.Controller">
+   <children>
+      <HBox layoutX="112.0" layoutY="100.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="400.0" prefWidth="304.0" spacing="15.0">
+               <children>
+                  <Button fx:id="btnShowAllSortedByAge" mnemonicParsing="false" onAction="#btnShowAllSortedByAgeOnClick" prefHeight="24.0" prefWidth="264.0" text="Show all sorted by age">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnShuffleSamples" mnemonicParsing="false" onAction="#btnShuffleSamplesOnClick" prefHeight="24.0" prefWidth="280.0" text="Shuffle samples">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnDistributionByRegions" mnemonicParsing="false" onAction="#btnDistributionByRegionsOnClick" prefHeight="24.0" prefWidth="287.0" text="Distribution by regions">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnShowEndangeredByAnimalType" mnemonicParsing="false" onAction="#btnShowEndangeredByAnimalTypeOnClick" prefHeight="24.0" prefWidth="298.0" text="Show endangered by Animal type">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnQuit" mnemonicParsing="false" onAction="#btnQuitOnClick" prefHeight="24.0" prefWidth="318.0" text="Quit">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="100.0" left="20.0" right="20.0" top="100.0" />
+               </HBox.margin>
+            </VBox>
+            <TextArea fx:id="txaResult" prefHeight="400.0" prefWidth="298.0">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </TextArea>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

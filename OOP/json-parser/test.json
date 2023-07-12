@@ -1,0 +1,33 @@
+{
+	"type": "Software Development Company",
+	"offices": [
+		{
+			"address": "Sofia"
+		},
+		{
+			"name": "Front Office",
+			"address": "New York City"
+		}
+	],
+	"members": [
+		{
+			"id": 0,
+			"name": "John Smith",
+			"birthdate": "1980-01-01"
+		},
+		{
+			"id": 1,
+			"name": "Jane Smith",
+			"birthdate": "1981-02-02"
+		},
+		{
+			"id": 2,
+			"name": "John Doe",
+			"birthdate": "1982-03-03"
+		}
+	],
+	"management": {
+		"directorId": 1,
+		"presidentId": 1
+	}
+}
